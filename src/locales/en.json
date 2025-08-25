@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Eric Djou",
+    "title": "Full Stack Developer",
+    "subtitle": "Passionate about creating beautiful and functional web experiences",
+    "cta": "Get In Touch",
+    "scroll": "Scroll Down"
+  },
+  "about": {
+    "title": "About",
+    "me": "Me",
+    "heading": "Passionate Web Developer & Tech Creator",
+    "description1": "I create digital solutions that combine modern technologies with great user experiences",
+    "description2": "I'm passionate about creating elegant solutions to complex problems, and I'm constantly learning new technologies and techniques to stay at the forefront of the ever-evolving web landscape.",
+    "getInTouch": "Get In Touch",
+    "downloadCV": "View CV",
+    "fullstack": {
+      "title": "Fullstack Web Development",
+      "description": "Designing and developing responsive websites and applications with a focus on scalability and user experience."
+    },
+    "identity": {
+      "title": "Developer Identity",
+      "description": "Creating intuitive front-end interfaces and seamless back-end experiences for modern web applications."
+    },
+    "entrepreneurial": {
+      "title": "Entrepreneurial Touch",
+      "description": "Driving projects from idea to delivery, blending agile practices with an entrepreneurial approach."
+    }
+  },
+  "skills": {
+    "title": "My",
+    "skills": "Skills",
+    "subtitle": "Technologies I work with",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "devops": "DevOps",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Featured",
+    "projects": "Projects",
+    "subtitle": "Some of my recent work",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "movieApp": {
+      "title": "Movie Search App",
+      "description": "A React app that allows users to search for movies and view details using the OMDB API."
+    },
+    "shoeStore": {
+      "title": "Serverless Drive – Secure File Management",
+      "description": "Full-stack App inspired by Google Drive that solves the problem of unsafe file sharing with OTP login, role-based access, and audit logs."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "description": "Responsive layout with hero, projects, skills, and contact sections, optimized for performance and accessibility."
+    }
+  },
+  "contact": {
+    "title": "Get In",
+    "touch": "Touch",
+    "subtitle": "Open to collaborations and new opportunities. Contact me to discuss how we can work together.",
+    "contactInfo": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "paris": "Paris, France",
+    "connectWithMe": "Connect With Me",
+    "sendMessage": "Send a Message",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourMessage": "Your Message",
+    "messagePlaceholder": "Hello, I would like to talk About...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "messageSent": "Message sent!",
+    "messageDescription": "Thank you for your message. I'll get back to you soon."
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "inParis": "in Paris",
+    "allRights": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}

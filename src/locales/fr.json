@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Eric Djou",
+    "title": "Développeur Full Stack",
+    "subtitle": "Je conçois des interfaces web esthétiques, efficaces et opérationnelles.",
+    "cta": "Me Contacter",
+    "scroll": "Défiler vers le bas"
+  },
+  "about": {
+    "title": "À Propos de",
+    "me": "Moi",
+    "heading": "Développeur Web Passionné & Créateur Tech",
+    "description1": "Je crée des solutions digitales qui allient technologies modernes et expériences utilisateurs de qualité.",
+    "description2": "Je suis passionné par la création de solutions élégantes à des problèmes complexes, et j'apprends constamment de nouvelles technologies et techniques pour rester à la pointe du paysage web en constante évolution.",
+    "getInTouch": "Me Contacter",
+    "downloadCV": "Voir le CV",
+    "fullstack": {
+      "title": "Développement Web Full Stack",
+      "description": "Conception et développement de sites web et applications responsifs avec un accent sur la scalabilité et l'expérience utilisateur."
+    },
+    "identity": {
+      "title": "Identité de Développeur",
+      "description": "Création d'interfaces front-end intuitives et d'expériences back-end fluides pour les applications web modernes."
+    },
+    "entrepreneurial": {
+      "title": "Touche Entrepreneuriale",
+      "description": "Conduire les projets de l'idée à la livraison, en mélangeant les pratiques agiles avec une approche entrepreneuriale."
+    }
+  },
+  "skills": {
+    "title": "Mes",
+    "skills": "Compétences",
+    "subtitle": "Technologies avec lesquelles je travaille",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de données",
+    "devops": "DevOps",
+    "tools": "Outils"
+  },
+  "projects": {
+    "title": "Projets Mis en",
+    "projects": "Avant",
+    "subtitle": "Quelques-uns de mes travaux récents",
+    "viewProject": "Voir le Projet",
+    "viewCode": "Voir le Code",
+    "movieApp": {
+      "title": "Application de Recherche de Films",
+      "description": "Une application React qui permet aux utilisateurs de rechercher des films et de voir les détails en utilisant l'API OMDB."
+    },
+    "shoeStore": {
+      "title": "Serverless Drive – Gestion de fichiers sécurisée",
+      "description": "Application full-stack inspirée de Google Drive qui résout le problème du partage non sécurisé grâce à l’authentification OTP, le partage avec rôles et les journaux d’audit."
+    },
+    "portfolio": {
+      "title": "Portfolio Personnel",
+      "description": "Mise en page responsive avec sections hero, projets, compétences et contact, optimisée pour les performances et l'accessibilité."
+    }
+  },
+  "contact": {
+    "title": "Me",
+    "touch": "Contacter",
+    "subtitle": "Ouvert aux collaborations et nouvelles opportunités. Contactez-moi pour discuter de la façon dont nous pouvons travailler ensemble.",
+    "contactInfo": "Informations de Contact",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "paris": "Paris, France",
+    "connectWithMe": "Connectez-vous avec Moi",
+    "sendMessage": "Envoyer un Message",
+    "yourName": "Votre Nom",
+    "yourEmail": "Votre Email",
+    "yourMessage": "Votre Message",
+    "messagePlaceholder": "Bonjour, j'aimerais parler de...",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "messageSent": "Message envoyé !",
+    "messageDescription": "Merci pour votre message. Je vous répondrai bientôt."
+  },
+  "footer": {
+    "madeWith": "Fait avec",
+    "inParis": "à Paris",
+    "allRights": "Tous droits réservés"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès"
+  }
+}

@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -13,6 +15,12 @@ const navItems = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { currentLanguage, changeLanguage, isFrench, t } = useLanguage();
+
+  const toggleLanguage = () => {
+    const newLanguage = isFrench ? "en" : "fr";
+    changeLanguage(newLanguage);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,9 +57,21 @@ export const Navbar = () => {
               href={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300 items-center"
             >
-              {item.name}
+              {t(`nav.${item.name.toLowerCase()}`)}
             </a>
           ))}
+        </div>
+
+        {/* Theme Toggle and Language Toggle - Desktop */}
+        <div className="hidden md:flex items-center space-x-3">
+          <ThemeToggle />
+          <button
+            onClick={toggleLanguage}
+            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors duration-300"
+            aria-label={`Switch to ${isFrench ? "English" : "French"}`}
+          >
+            {isFrench ? "EN" : "FR"}
+          </button>
         </div>
 
         {/* mobile nav */}
@@ -80,9 +100,23 @@ export const Navbar = () => {
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.name}
+                {t(`nav.${item.name.toLowerCase()}`)}
               </a>
             ))}
+
+            {/* Theme Toggle and Language Toggle - Mobile */}
+            <div className="flex flex-col space-y-4 items-center">
+              <ThemeToggle />
+              <button
+                onClick={() => {
+                  toggleLanguage();
+                  setIsMenuOpen(false);
+                }}
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {isFrench ? "Switch to English" : "Passer en Français"}
+              </button>
+            </div>
           </div>
         </div>
       </div>

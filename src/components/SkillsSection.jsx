@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const skills = [
   // Frontend
   { name: "HTML/CSS", level: 95, category: "frontend" },
@@ -34,6 +36,7 @@ const categories = ["all", "frontend", "backend", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const { t } = useLanguage();
 
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
@@ -42,7 +45,8 @@ export const SkillsSection = () => {
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+          {t("skills.title")}{" "}
+          <span className="text-primary">{t("skills.skills")}</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -57,7 +61,7 @@ export const SkillsSection = () => {
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
               )}
             >
-              {category}
+              {category === "all" ? "All" : t(`skills.${category}`)}
             </button>
           ))}
         </div>

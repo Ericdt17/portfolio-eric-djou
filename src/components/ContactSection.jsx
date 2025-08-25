@@ -2,10 +2,12 @@ import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useLanguage();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,8 +16,8 @@ export const ContactSection = () => {
 
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: t("contact.messageSent"),
+        description: t("contact.messageDescription"),
       });
       setIsSubmitting(false);
     }, 1500);
@@ -24,22 +26,24 @@ export const ContactSection = () => {
     <section id="Contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
-          Get In <span className="text-primary">Touch</span>
+          {t("contact.title")}{" "}
+          <span className="text-primary">{t("contact.touch")}</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Open to collaborations and new opportunities. Contact me to discuss
-          how we can work together.
+          {t("contact.subtitle")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {t("contact.contactInfo")}
+            </h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Email</h4>
+                  <h4 className="font-medium">{t("contact.email")}</h4>
                   <a
                     href="mailto:eric.djou17@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -53,7 +57,7 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Phone</h4>
+                  <h4 className="font-medium">{t("contact.phone")}</h4>
                   <a
                     href="tel:+237658478764"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -67,13 +71,15 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Location</h4>
-                  <span className="text-muted-foreground">Paris, France</span>
+                  <h4 className="font-medium">{t("contact.location")}</h4>
+                  <span className="text-muted-foreground">
+                    {t("contact.paris")}
+                  </span>
                 </div>
               </div>
             </div>
             <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect With Me</h4>
+              <h4 className="font-medium mb-4">{t("contact.connectWithMe")}</h4>
               <div className="flex space-x-4 justify-center">
                 <a
                   href="https://linkedin.com"
@@ -97,7 +103,9 @@ export const ContactSection = () => {
 
           {/* Contact Form Section */}
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {t("contact.sendMessage")}
+            </h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
@@ -105,7 +113,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Name{" "}
+                  {t("contact.yourName")}{" "}
                 </label>
                 <input
                   type="text"
@@ -124,7 +132,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Email{" "}
+                  {t("contact.yourEmail")}{" "}
                 </label>
                 <input
                   type="email"
@@ -141,7 +149,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Message{" "}
+                  {t("contact.yourMessage")}{" "}
                 </label>
                 <textarea
                   id="message"
@@ -159,7 +167,7 @@ export const ContactSection = () => {
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? t("contact.sending") : t("contact.send")}
                 <Send size={16} />
               </button>
             </form>
